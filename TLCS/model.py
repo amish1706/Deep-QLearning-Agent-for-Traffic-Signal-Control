@@ -41,7 +41,7 @@ class TrainModel:
         Predict the action values from a single state
         """
         state = np.reshape(state, [1, self._input_dim])
-        return self._model.predict(state)
+        return self._model(state, training=False).numpy()
 
 
     def predict_batch(self, states):
