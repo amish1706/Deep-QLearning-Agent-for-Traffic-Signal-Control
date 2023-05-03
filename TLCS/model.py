@@ -48,7 +48,7 @@ class TrainModel:
         """
         Predict the action values from a batch of states
         """
-        return self._model.predict(states)
+        return self._model(states)
 
 
     def train_batch(self, states, q_sa):
