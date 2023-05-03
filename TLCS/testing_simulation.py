@@ -76,7 +76,7 @@ class Simulation:
             self._reward_episode.append(reward)
 
         #print("Total reward:", np.sum(self._reward_episode))
-        traci.close()
+        traci.close(False)
         simulation_time = round(timeit.default_timer() - start_time, 1)
 
         return simulation_time
